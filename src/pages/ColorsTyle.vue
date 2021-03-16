@@ -1,5 +1,5 @@
 <template>
-  <div class="ColorsTypeContainerAll">
+  <div class="ColorsTypeContainerAll ContainerAll">
     <div class="ColorsTypeColors">
       <div class="ColorsTypePicture">
         <div v-for="(str, index) in this.colorsAll" :key="index">
@@ -15,10 +15,10 @@
     </div>
     <div class="ColorsTypeType">
       <div class="ColorsTypeContainer" v-for="(str,index) in this.colorsTags" :key="index">
-        <div class="ColorsTypeTags">
+        <div class="ColorsTypeTags" v-bind:class="str.colorsTagsTagStyle">
           <p>{{str.colorsTagsTag}}</p>
         </div>
-        <div class="ColorTypeText">
+        <div class="ColorTypeText" v-bind:class="str.colorsTagsTextStyle">
           <p>{{str.colorsTagsText}}</p>
         </div>
       </div>
@@ -31,13 +31,13 @@ export default {
   data: function () {
     return {
       colorsAll: [
-        { activeclass: 'someColor' },
-        { activeclass: 'someColor1' },
-        { activeclass: 'someColor2' },
-        { activeclass: 'someColor' },
-        { activeclass: 'someColor1' },
-        { activeclass: 'someColor2' },
-        { activeclass: 'someColor2' }
+        { activeclass: 'ColorsTypePictureBgDark100' },
+        { activeclass: 'ColorsTypePictureBgDark75' },
+        { activeclass: 'ColorsTypePictureBgDark50' },
+        { activeclass: 'ColorsTypePictureBgDark25' },
+        { activeclass: 'ColorsTypePictureBgDark05' },
+        { activeclass: 'ColorsTypePicturePurle' },
+        { activeclass: 'ColorsTypePictureGreen' }
       ],
       colorsName: [
         {
@@ -72,19 +72,27 @@ export default {
       colorsTags: [
         {
           colorsTagsTag: 'H1',
-          colorsTagsText: 'This one is the sub-section widget title'
+          colorsTagsText: 'This one is the sub-section or widget title',
+          colorsTagsTextStyle: 'colorsTagsTextSize24',
+          colorsTagsTagStyle: 'colorsTagsTagSize24'
         },
         {
           colorsTagsTag: 'H2',
-          colorsTagsText: 'Next one is the item title inside widgets'
+          colorsTagsText: 'Next one is the item title inside widgets',
+          colorsTagsTextStyle: 'colorsTagsTextSize19',
+          colorsTagsTagStyle: 'colorsTagsTagSize19'
         },
         {
           colorsTagsTag: 'H3',
-          colorsTagsText: 'This is a label or CTA text'
+          colorsTagsText: 'This is a label or CTA text',
+          colorsTagsTextStyle: 'colorsTagsTextSize12',
+          colorsTagsTagStyle: 'colorsTagsTagSize12'
         },
         {
           colorsTagsTag: 'Body',
-          colorsTagsText: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.'
+          colorsTagsText: 'This is the body text which is used for most of the design, like paragraphs, lists, etc.',
+          colorsTagsTextStyle: 'colorsTagsTextSize14',
+          colorsTagsTagStyle: 'colorsTagsTagSize14'
         }
       ]
     }
@@ -94,6 +102,7 @@ export default {
 
 <style lang="less">
 @import '../style/StyleAll';
+@import '../style/variables';
 @font-face {
   font-family: Montserrat Arial;
   src: url('../assets/Font/Montserrat.ttf');
@@ -102,10 +111,8 @@ export default {
   font-family: Montserrat_Light Arial;
   src: url('../assets/Font/Montserrat_Light.ttf');
 }
+
 .ColorsTypeContainerAll {
-  max-width: 1440px;
-  margin: 0 auto;
-  box-sizing: border-box;
   border: cornflowerblue 1px solid;
   display: flex;
   justify-content: space-between;
@@ -140,7 +147,11 @@ export default {
 }
 .ColorsTypePictureNameSize {
   font-family: Montserrat_Light Arial;
-  margin-bottom: 43px;
+  margin-bottom: 34px;
+  font-size: 19px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #1f2041;
 }
 .ColorsTypeContainer {
   display: flex;
@@ -156,13 +167,50 @@ export default {
   margin-left: 30px;
   text-align: left;
 }
-  .someColor {
-    background: @block-background;
-  }
-  .someColor1 {
-    background: red;
-  }
-  .someColor2 {
-    background: greenyellow;
-  }
+.ColorsTypePictureBgDark100 {
+  .dark100
+}
+.ColorsTypePictureBgDark75 {
+  .dark75
+}
+.ColorsTypePictureBgDark50 {
+  .dark50
+}
+.ColorsTypePictureBgDark25 {
+  .dark25
+}
+.ColorsTypePictureBgDark05 {
+  .dark05
+}
+.ColorsTypePicturePurle {
+  .purle
+}
+.ColorsTypePictureGreen {
+  .green
+}
+.colorsTagsTextSize24 {
+  .fontSize24
+}
+.colorsTagsTextSize19 {
+  .fontSize19
+}
+.colorsTagsTextSize12 {
+  .fontSize12
+}
+.colorsTagsTextSize14 {
+  .fontSize14
+}
+.colorsTagsTagSize24 {
+  .fontSize24Opacity25
+}
+.colorsTagsTagSize19 {
+  .fontSize19Opacity25
+}
+.colorsTagsTagSize12 {
+  .fontSize12Opacity25
+}
+.colorsTagsTagSize14 {
+  .fontSize14Opacity25
+}
+
 </style>
