@@ -1,5 +1,6 @@
 <template>
   <div class="ColorsTypeContainerAll ContainerAll">
+    <Logo />
     <div class="ColorsTypeColors">
       <div class="ColorsTypePicture">
         <div v-for="(str, index) in this.colorsAll" :key="index">
@@ -27,7 +28,11 @@
 </template>
 
 <script>
+import Logo from '../components/Logo'
 export default {
+  components: {
+    Logo
+  },
   data: function () {
     return {
       colorsAll: [
