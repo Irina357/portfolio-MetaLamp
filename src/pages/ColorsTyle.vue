@@ -118,7 +118,6 @@ export default {
 }
 
 .ColorsTypeContainerAll {
-  border: cornflowerblue 1px solid;
   display: flex;
   justify-content: space-between;
   padding-left: 150px;
