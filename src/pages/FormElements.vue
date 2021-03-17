@@ -10,7 +10,7 @@
           <p class="FormElementsTitleOpacity">Default</p>
         </div>
       </div>
-      <input class="inputBig" type="email" placeholder="email">
+      <input class="inputLarge inputLargeMarginBottom " type="email" placeholder="email">
       <div class="FormElementsTitleContainer">
         <div>
           <p class="FormElementsTitle">Text Field</p>
@@ -19,23 +19,23 @@
           <p class="FormElementsTitleOpacity">Hover/Focus</p>
         </div>
       </div>
-      <input class="inputBig inputHover" type="email" placeholder="This is pretty awesome">
+      <input class="inputLarge inputLargeMarginBottom inputHover" type="email" placeholder="This is pretty awesome">
       <div class="FormElementsTitleContainer">
         <div>
           <p class="FormElementsTitle">Dropdown</p>
         </div>
       </div>
-      <div class="inputBig SelectTitle">
+      <div class="inputLarge inputLargeMarginBottom SelectTitle">
         <p class="SelectText">Сколько гостей</p>
         <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
       </div>
-      <div class="FormElementsTitleContainer ElemenrsContainerMarginTop">
+      <div class="FormElementsTitleContainer">
         <div>
           <p class="FormElementsTitle">Masked Text Field</p>
         </div>
       </div>
-      <input class="inputBig" type="date" placeholder="ДД.ММ.ГГГГ">
-      <div class="FormElementsElementContainer">
+      <input class="inputLarge inputBigMarginBottom inputLargeMarginBottom" type="date" placeholder="ДД.ММ.ГГГГ">
+      <div class="FormElementsElementContainer ElementsContainerMarginTop">
         <div>
           <div class="inputLittleTitleMarginBottom">
           <p class="FormElementsTitle">Date Dropdown</p>
@@ -55,7 +55,7 @@
       </div>
         </div>
       </div>
-       <div class="FormElementsTitleContainer">
+       <div class="FormElementsTitleContainer ElementsContainerMarginTop">
         <div>
           <p class="FormElementsTitle">Filter date Dropdown</p>
         </div>
@@ -64,6 +64,28 @@
         <p class="SelectText">19 августа 23 августа</p>
         <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
       </div>
+      <div class="FormElementsTitleContainer ElementsContainerMarginTop">
+        <div>
+          <p class="FormElementsTitle">Subscription text field</p>
+        </div>
+      </div>
+      <div class="inputMiddle SelectTitle FormElementsSubscriptionPadding">
+        <input type="email" class="inputMiddle" placeholder="email">
+        <button type="button" class="SelectBtn"><img src="../assets/arrow_forward.png"></button>
+      </div>
+       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer">
+        <div>
+          <p class="FormElementsTitle">Dropdown</p>
+        </div>
+        <div>
+          <p class="FormElementsTitleOpacity">Default</p>
+        </div>
+      </div>
+      <div class="inputMiddle SelectTitle DropdownBorder">
+        <p class="SelectText">19 августа 23 августа</p>
+        <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
+      </div>
+      <DropdownRooms />
     </div>
     <div>
     </div>
@@ -74,10 +96,12 @@
 
 <script>
 import Logo from '../components/Logo'
+import DropdownRooms from '../components/DropdownRooms'
 
 export default {
   components: {
-    Logo
+    Logo,
+    DropdownRooms
   }
 }
 </script>
@@ -101,11 +125,11 @@ export default {
   .inputLarge;
   margin-bottom: 20px;
 }
-.inputLittle {
-  .inputLittle
+.inputLargeMarginBottom {
+  margin-bottom: 20px;
 }
-input.inputHover:hover, input.inputHover:focus {
-  border: rgba(31,32,65,0.5) 1px solid;
+.inputBigMarginBottom {
+  margin-bottom: 0;
 }
 .FormElementsTitle {
   .fontSize12
@@ -119,9 +143,11 @@ input.inputHover:hover, input.inputHover:focus {
   width: 320px;
   margin-bottom: 40px;
 }
-.inputLittleTitleMarginBottom {margin-bottom: 5px}
-.inputMiddle {
-  .inputMiddle
+.inputLittleTitleMarginBottom {
+  margin-bottom: 5px
 }
-.ElemenrsContainerMarginTop{margin-top: 40px}
+.InputMiddleContainer {
+  width: 266px;
+}
+.ElementsContainerMarginTop{margin-top: 40px}
 </style>
