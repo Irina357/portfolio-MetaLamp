@@ -4,6 +4,10 @@ body, h1, h2, h3, h4, h5, p, img {
 }
 body {
   background: #e5e5e5;
+  box-sizing: border-box;
+}
+button:focus {
+  outline: none;
 }
 .ContainerAll {
   position: relative;
@@ -46,4 +50,41 @@ body {
 }
 input.inputHover:hover, input.inputHover:focus {
   border: rgba(31,32,65,0.5) 1px solid;
+}
+.DropdownBorder {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.DropdownText {
+  width: 150px;
+  padding-top: 6px;
+}
+.DropdownBtn {
+  width: 30px
+}
+.DropdownBtnCount {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  border: rgba(31,32,65,0.5) 1px solid;
+  margin-bottom: 7px;
+  background: none;
+}
+.DropdownCount {
+  width: 32px
+}
+.DropdownCountText {
+  .fontSize12;
+  margin-top: 8px;
+  margin-bottom: 22px;
+}
+.DropdownTextStyle {
+  .fontSize12;
+  margin-bottom: 22px;
+}
+.DropdownBtnPlusMn {
+  margin-top: 5px;
+}
+.DropdownBtnMinusMn {
+  margin-top: -15px;
 }

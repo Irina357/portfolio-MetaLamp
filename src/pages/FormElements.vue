@@ -73,7 +73,7 @@
         <input type="email" class="inputMiddle" placeholder="email">
         <button type="button" class="SelectBtn"><img src="../assets/arrow_forward.png"></button>
       </div>
-       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer">
+       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer DropdownMt">
         <div>
           <p class="FormElementsTitle">Dropdown</p>
         </div>
@@ -81,10 +81,18 @@
           <p class="FormElementsTitleOpacity">Default</p>
         </div>
       </div>
-      <div class="inputMiddle SelectTitle DropdownBorder">
+      <div class="inputMiddle SelectTitle DropdownBorder DropdownMb">
         <p class="SelectText">19 августа 23 августа</p>
         <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
       </div>
+      <div class="FormElementsTitleContainer InputMiddleContainer">
+      <div>
+        <p class="FormElementsTitle">Dropdown</p>
+      </div>
+      <div>
+        <p class="FormElementsTitleOpacity">Default</p>
+      </div>
+    </div>
       <DropdownRooms />
     </div>
     <div>
@@ -150,4 +158,6 @@ export default {
   width: 266px;
 }
 .ElementsContainerMarginTop{margin-top: 40px}
+.DropdownMt {margin-top: 60px}
+.DropdownMb {margin-bottom: 20px}
 </style>
