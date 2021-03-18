@@ -93,7 +93,10 @@
         <p class="FormElementsTitleOpacity">Default</p>
       </div>
     </div>
+      <div class="DropdownRoomsContainer">
       <DropdownRooms />
+      </div>
+      <CheckboxList />
     </div>
     <div>
     </div>
@@ -105,9 +108,11 @@
 <script>
 import Logo from '../components/Logo'
 import DropdownRooms from '../components/DropdownRooms'
+import CheckboxList from '../components/CheckboxList'
 
 export default {
   components: {
+    CheckboxList,
     Logo,
     DropdownRooms
   }
@@ -160,4 +165,5 @@ export default {
 .ElementsContainerMarginTop{margin-top: 40px}
 .DropdownMt {margin-top: 60px}
 .DropdownMb {margin-bottom: 20px}
+.DropdownRoomsContainer {margin-bottom: 54px}
 </style>

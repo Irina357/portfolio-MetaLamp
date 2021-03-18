@@ -88,3 +88,42 @@ input.inputHover:hover, input.inputHover:focus {
 .DropdownBtnMinusMn {
   margin-top: -15px;
 }
+/*Check list*/
+.custom-checkbox>input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox>span {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.custom-checkbox>span::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: rgba(31,32,65,0.5) 1px solid;
+  border-radius: 4px;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.custom-checkbox>input:checked+span::before{
+  border-color: @colorPurle;
+  background-image: url("../assets/checkbox.png");
+}
+.CheckboxListBodyText {
+    .fontSize14;
+  opacity: .5;
+}
+
