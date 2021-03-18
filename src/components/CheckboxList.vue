@@ -8,10 +8,10 @@
       </button>
     </div>
     <div v-for="(str, index) in this.checkboxListArry" :key="index" v-show="checkboxStstus">
-        <label class="custom-checkbox">
-          <input type="checkbox" name="name" value="yes" id="index">
-          <span class="CheckboxListBodyText">{{ str.checkboxListText }}</span>
-          </label>
+      <label class="custom-checkbox">
+        <input type="checkbox" name="name" value="yes" id="index">
+        <span class="CheckboxListBodyText">{{ str.checkboxListText }}</span>
+      </label>
     </div>
   </div>
 </template>
@@ -67,7 +67,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 266px;
-  margin-bottom: 17px;
+  margin-bottom: 2px;
 }
 .CheckboxListTitle {
   .fontSize12

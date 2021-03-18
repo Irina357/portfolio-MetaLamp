@@ -1,7 +1,7 @@
 <template>
   <div class="ContainerAll FormElementsContainer">
     <Logo/>
-    <div>
+    <div class="FormElementsColumnLeft">
       <div class="FormElementsTitleContainer">
         <div>
           <p class="FormElementsTitle">Text Field</p>
@@ -96,11 +96,31 @@
       <div class="DropdownRoomsContainer">
       <DropdownRooms />
       </div>
+      <div class="FormElementsCheckboxListMb">
+      <div class="CheckboxListTitleContainer">
+      <p class="CheckboxListTitle">expandable checkbox list</p>
+      <button type="button" class="SelectBtn CheckboxListTitleBtnOpacity">
+        <img src="../assets/expand_more.png">
+      </button>
+    </div>
+      </div>
       <CheckboxList />
+      <img src="../assets/location_city-24px.svg">
     </div>
-    <div>
+    <div class="FormElementsColumnCentre">
+      <div class="CheckboxListTitleContainer CheckboxButtonMb">
+      <p class="CheckboxListTitle">checkbox buttons</p>
     </div>
-    <div>
+      <CheckboxButtons />
+      <div class='FormElementsRadioBtnContainer'>
+        <p class="CheckboxListTitle">radio buttons</p>
+      </div>
+      <RadioButtons />
+    </div>
+    <div class="FormElementsColumnRight">
+      <div class="CheckboxListTitleContainer">
+      <p class="CheckboxListTitle">radio buttons</p>
+    </div>
     </div>
   </div>
 </template>
@@ -109,9 +129,13 @@
 import Logo from '../components/Logo'
 import DropdownRooms from '../components/DropdownRooms'
 import CheckboxList from '../components/CheckboxList'
+import CheckboxButtons from '../components/CheckboxButtons'
+import RadioButtons from '../components/RadioButtons'
 
 export default {
   components: {
+    RadioButtons,
+    CheckboxButtons,
     CheckboxList,
     Logo,
     DropdownRooms
@@ -127,6 +151,17 @@ export default {
   justify-content: space-between;
   padding-left: 141px;
   padding-top: 143px;
+  padding-right: 141px;
+}
+.FormElementsColumnLeft, .FormElementsColumnCentre, .FormElementsColumnRight {
+  max-width: 320px;
+  margin-right: 126px;
+}
+.FormElementsColumnCentre {
+  margin-right: 72px;
+}
+.FormElementsColumnRight {
+  margin: 0;
 }
 .FormElementsTitleContainer {
   display: flex;
@@ -166,4 +201,11 @@ export default {
 .DropdownMt {margin-top: 60px}
 .DropdownMb {margin-bottom: 20px}
 .DropdownRoomsContainer {margin-bottom: 54px}
+.FormElementsCheckboxListMb {margin-bottom: 34px}
+.CheckboxButtonMb {margin-bottom: 17px}
+.FormElementsRadioBtnContainer {
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
 </style>
