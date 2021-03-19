@@ -6,10 +6,12 @@
         </div>
         <div class="RadioButtonsActive CheckedFemale" v-show="checkedStatusFemale">
         </div>
+        <div class="ToggleContainer">
         <input type="radio" id="man" name="contact" value="man" checked class="custom-radio" @click="checkedMan">
           <label for="man" class="RadioButtonsLabel" v-bind:class="{CheckedLabel:checkedStatusLabelMan}">Мужчина</label>
         <input type="radio" id="female" name="contact" value="female" class="custom-radio" @click="checkedFemale">
           <label for="female" class="RadioButtonsLabel" v-bind:class="{CheckedLabel: checkedStatusLabelFemale}">женщина</label>
+        </div>
       </div>
     </form>
   </div>
