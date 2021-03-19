@@ -13,34 +13,37 @@ export default {}
 <style lang="less">
 @import '../style/variables';
 @import '../style/StyleAll';
+
 .ToggleContainer {
   display: table-cell;
-    vertical-align: middle;
-    height: 50px;
-    border: 1px solid red;
+  vertical-align: middle;
+  height: 20px;
 }
+
 .toggle-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
+
 .toggle-button {
- position: relative;
- display: inline-block;
- width: 40px;
- height: 20px;
- /*margin: 0;*/
- vertical-align: top;
- background: white;
- border: rgba(31,32,65,0.25) 1px solid;
- border-radius: 10px;
- outline: none;
- cursor: pointer;
- -webkit-appearance: none;
- -moz-appearance: none;
- appearance: none;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  /*margin: 0;*/
+  vertical-align: top;
+  background: white;
+  border: rgba(31, 32, 65, 0.25) 1px solid;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin-right: 10px;
 }
+
 .toggle-button::after {
   content: "";
   display: inline-block;
@@ -56,12 +59,14 @@ export default {}
   transform: translateX(0);
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
 }
+
 .toggle-button:checked::after {
   transform: translateX(calc(100% + 4px));
   background: linear-gradient(180deg, #bc9cff 0%, #8BA4F9 100%);
   opacity: 1;
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
 }
+
 .toggle-button:checked {
   background-color: white;
   border: @colorPurle 1px solid;
