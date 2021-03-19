@@ -116,6 +116,10 @@
         <p class="CheckboxListTitle">radio buttons</p>
       </div>
       <RadioButtons />
+      <div class='FormElementsRadioBtnContainer'>
+        <p class="CheckboxListTitle">toggle</p>
+      </div>
+      <Toggle />
     </div>
     <div class="FormElementsColumnRight">
       <div class="CheckboxListTitleContainer">
@@ -131,9 +135,10 @@ import DropdownRooms from '../components/DropdownRooms'
 import CheckboxList from '../components/CheckboxList'
 import CheckboxButtons from '../components/CheckboxButtons'
 import RadioButtons from '../components/RadioButtons'
-
+import Toggle from '../components/Toggle'
 export default {
   components: {
+    Toggle,
     RadioButtons,
     CheckboxButtons,
     CheckboxList,

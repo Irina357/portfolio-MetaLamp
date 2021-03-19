@@ -7,9 +7,9 @@
         <div class="RadioButtonsActive CheckedFemale" v-show="checkedStatusFemale">
         </div>
         <input type="radio" id="man" name="contact" value="man" checked class="custom-radio" @click="checkedMan">
-          <label for="man" class="RadioButtonsLabel">Мужчина</label>
+          <label for="man" class="RadioButtonsLabel" v-bind:class="{CheckedLabel:checkedStatusLabelMan}">Мужчина</label>
         <input type="radio" id="female" name="contact" value="female" class="custom-radio" @click="checkedFemale">
-          <label for="female" class="RadioButtonsLabel">женщина</label>
+          <label for="female" class="RadioButtonsLabel" v-bind:class="{CheckedLabel: checkedStatusLabelFemale}">женщина</label>
       </div>
     </form>
   </div>
@@ -19,17 +19,23 @@ export default {
   data () {
     return {
       checkedStatusMan: true,
-      checkedStatusFemale: false
+      checkedStatusFemale: false,
+      checkedStatusLabelMan: false,
+      checkedStatusLabelFemale: true
     }
   },
   methods: {
     checkedMan () {
       this.checkedStatusMan = !this.checkedStatusMan
       this.checkedStatusFemale = !this.checkedStatusFemale
+      this.checkedStatusLabelMan = !this.checkedStatusLabelMan
+      this.checkedStatusLabelFemale = !this.checkedStatusLabelFemale
     },
     checkedFemale () {
       this.checkedStatusFemale = !this.checkedStatusFemale
       this.checkedStatusMan = !this.checkedStatusMan
+      this.checkedStatusLabelFemale = !this.checkedStatusLabelFemale
+      this.checkedStatusLabelMan = !this.checkedStatusLabelMan
     }
   }
 }
@@ -89,5 +95,8 @@ export default {
    .CheckedFemale {
      left: 126px;
      top: 5.5px;
+   }
+   .CheckedLabel {
+    color: rgba(31, 32, 65, .5);
    }
 </style>
