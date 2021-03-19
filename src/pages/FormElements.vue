@@ -104,8 +104,10 @@
           </button>
         </div>
       </div>
+      <div class="CheckboxListContainer">
       <CheckboxList/>
-      <img src="../assets/location_city-24px.svg">
+      </div>
+      <Advantage />
     </div>
     <div class="FormElementsColumnCentre">
       <div class="CheckboxListTitleContainer CheckboxButtonMb">
@@ -165,8 +167,10 @@ import LikeButton from '../components/LikeButton'
 import RateButton from '../components/RateButton'
 import Guests from '../components/Guests'
 import RichCeckboxButtons from '../components/RichCeckboxButtons'
+import Advantage from '../components/Advantage'
 export default {
   components: {
+    Advantage,
     RichCeckboxButtons,
     Guests,
     RateButton,
@@ -262,4 +266,5 @@ export default {
   margin-top: 114px;
   margin-bottom: 16px;
 }
+.CheckboxListContainer {margin-bottom: 100px}
 </style>

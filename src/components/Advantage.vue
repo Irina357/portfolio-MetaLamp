@@ -1,39 +1,54 @@
 <template>
   <div>
-    <div v-for="(str, index) in this.checkboxListArry" :key="index">
-      <label class="custom-checkbox">
-        <input type="checkbox" name="name" value="yes" id="index">
-        <span class="CheckboxListBodyText CheckboxButtonSpunWidth">{{ str.checkboxListText }}</span>
-      </label>
+  <div class="AdvantageContainer">
+    <div class="AdvantageImgContainer">
+      <img src="../assets/insert_emoticon-24px.svg" class="AdvantageImg">
     </div>
+    <div class="AdvantageText">
+      <p class="AdvantageTextBold">комфорт</p>
+      <p>Звукопоглощяющие стены</p>
+    </div>
+  </div>
+    <div class="AdvantageContainer">
+    <div class="AdvantageImgContainer">
+      <img src="../assets/location_city-24px.svg" class="AdvantageImg">
+    </div>
+    <div class="AdvantageText">
+      <p class="AdvantageTextBold">комфорт</p>
+      <p>Звукопоглощяющие стены</p>
+    </div>
+  </div>
   </div>
 </template>
 <script>
 export default {
   data () {
-    return {
-      checkboxListArry: [
-        {
-          checkboxListText: 'Можно курить',
-          id: 1
-        },
-        {
-          checkboxListText: 'Можно с питомцами',
-          id: 2
-        },
-        {
-          checkboxListText: 'Можно пригласить гостей (до 10 человек)',
-          id: 3
-        }
-      ]
-    }
   }
 }
 </script>
 <style lang="less">
 @import '../style/variables';
 @import '../style/StyleAll';
-.CheckboxButtonSpunWidth {
-  max-width: 250px;
+.AdvantageContainer {
+  display: flex;
+  justify-content: start;
+  width: 280px;
+  height: 68px;
+  margin-bottom: 20px;
+  border-bottom: rgba(31,32,65,0.1) 1px solid;
 }
+.AdvantageImgContainer {
+  margin-right: 10px;
+}
+.AdvantageImg {
+  width: 48px;
+  height: 48px;
+}
+.AdvantageText {
+  .fontSize14;
+  opacity: .75;
+}
+.AdvantageTextBold {
+    font-weight: bold;
+  }
 </style>
