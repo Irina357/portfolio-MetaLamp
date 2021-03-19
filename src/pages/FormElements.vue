@@ -38,24 +38,24 @@
       <div class="FormElementsElementContainer ElementsContainerMarginTop">
         <div>
           <div class="inputLittleTitleMarginBottom">
-          <p class="FormElementsTitle">Date Dropdown</p>
-        </div>
+            <p class="FormElementsTitle">Date Dropdown</p>
+          </div>
           <div class="inputLittle SelectTitle">
-        <p class="SelectText">ДД.мм.гггг</p>
-        <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
-      </div>
+            <p class="SelectText">ДД.мм.гггг</p>
+            <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
+          </div>
         </div>
         <div>
-           <div class="inputLittleTitleMarginBottom">
-          <p class="FormElementsTitle">Date Dropdown</p>
-        </div>
+          <div class="inputLittleTitleMarginBottom">
+            <p class="FormElementsTitle">Date Dropdown</p>
+          </div>
           <div class="inputLittle SelectTitle">
-        <p class="SelectText">ДД.мм.гггг</p>
-        <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
-      </div>
+            <p class="SelectText">ДД.мм.гггг</p>
+            <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
+          </div>
         </div>
       </div>
-       <div class="FormElementsTitleContainer ElementsContainerMarginTop">
+      <div class="FormElementsTitleContainer ElementsContainerMarginTop">
         <div>
           <p class="FormElementsTitle">Filter date Dropdown</p>
         </div>
@@ -73,7 +73,7 @@
         <input type="email" class="inputMiddle" placeholder="email">
         <button type="button" class="SelectBtn"><img src="../assets/arrow_forward.png"></button>
       </div>
-       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer DropdownMt">
+      <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer DropdownMt">
         <div>
           <p class="FormElementsTitle">Dropdown</p>
         </div>
@@ -86,45 +86,58 @@
         <button type="button" class="SelectBtn"><img src="../assets/expand_more.png"></button>
       </div>
       <div class="FormElementsTitleContainer InputMiddleContainer">
-      <div>
-        <p class="FormElementsTitle">Dropdown</p>
+        <div>
+          <p class="FormElementsTitle">Dropdown</p>
+        </div>
+        <div>
+          <p class="FormElementsTitleOpacity">Default</p>
+        </div>
       </div>
-      <div>
-        <p class="FormElementsTitleOpacity">Default</p>
-      </div>
-    </div>
       <div class="DropdownRoomsContainer">
-      <DropdownRooms />
+        <DropdownRooms/>
       </div>
       <div class="FormElementsCheckboxListMb">
-      <div class="CheckboxListTitleContainer">
-      <p class="CheckboxListTitle">expandable checkbox list</p>
-      <button type="button" class="SelectBtn CheckboxListTitleBtnOpacity">
-        <img src="../assets/expand_more.png">
-      </button>
-    </div>
+        <div class="CheckboxListTitleContainer">
+          <p class="CheckboxListTitle">expandable checkbox list</p>
+          <button type="button" class="SelectBtn CheckboxListTitleBtnOpacity">
+            <img src="../assets/expand_more.png">
+          </button>
+        </div>
       </div>
-      <CheckboxList />
+      <CheckboxList/>
       <img src="../assets/location_city-24px.svg">
     </div>
     <div class="FormElementsColumnCentre">
       <div class="CheckboxListTitleContainer CheckboxButtonMb">
-      <p class="CheckboxListTitle">checkbox buttons</p>
-    </div>
-      <CheckboxButtons />
+        <p class="CheckboxListTitle">checkbox buttons</p>
+      </div>
+      <CheckboxButtons/>
       <div class='FormElementsRadioBtnContainer'>
         <p class="CheckboxListTitle">radio buttons</p>
       </div>
-      <RadioButtons />
+      <RadioButtons/>
       <div class='FormElementsRadioBtnContainer'>
         <p class="CheckboxListTitle">toggle</p>
       </div>
-      <Toggle />
+      <Toggle/>
+      <div class="FormElementsToggleContainerMt">
+        <Toggle/>
+      </div>
+      <div class='FormElementsRadioBtnContainer'>
+        <p class="CheckboxListTitle">Like button</p>
+      </div>
+      <div class="FormElementLikeButtonContainer">
+        <LikeButton/>
+        <LikeButton/>
+      </div>
+      <div class='FormElementsRadioBtnContainer'>
+        <p class="CheckboxListTitle">Rate button</p>
+      </div>
     </div>
     <div class="FormElementsColumnRight">
       <div class="CheckboxListTitleContainer">
-      <p class="CheckboxListTitle">radio buttons</p>
-    </div>
+        <p class="CheckboxListTitle">radio buttons</p>
+      </div>
     </div>
   </div>
 </template>
@@ -136,8 +149,10 @@ import CheckboxList from '../components/CheckboxList'
 import CheckboxButtons from '../components/CheckboxButtons'
 import RadioButtons from '../components/RadioButtons'
 import Toggle from '../components/Toggle'
+import LikeButton from '../components/LikeButton'
 export default {
   components: {
+    LikeButton,
     Toggle,
     RadioButtons,
     CheckboxButtons,
@@ -212,5 +227,11 @@ export default {
   margin-top: 40px;
   margin-bottom: 16px;
 }
-
+.FormElementsToggleContainerMt {margin-top: 7px}
+.FormElementLikeButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+  margin-bottom: 44px;
+}
 </style>
