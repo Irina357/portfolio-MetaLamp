@@ -69,7 +69,7 @@
           <p class="FormElementsTitle">Subscription text field</p>
         </div>
       </div>
-      <div class="inputMiddle SelectTitle FormElementsSubscriptionPadding">
+      <div class="inputMiddle SelectTitle FormElementsSubscriptionPadding FormElementsSubscriptionMb">
         <input type="email" class="inputMiddle" placeholder="email">
         <button type="button" class="SelectBtn"><img src="../assets/arrow_forward.png"></button>
       </div>
@@ -133,6 +133,14 @@
       <div class='FormElementsRadioBtnContainer'>
         <p class="CheckboxListTitle">Rate button</p>
       </div>
+      <div class="FormElementsRateButtonContainer">
+      <RateButton />
+      <RateButton />
+      </div>
+      <div>
+          <p class="FormElementsTitle">Dropdown</p>
+        </div>
+      <Guests />
     </div>
     <div class="FormElementsColumnRight">
       <div class="CheckboxListTitleContainer">
@@ -150,8 +158,12 @@ import CheckboxButtons from '../components/CheckboxButtons'
 import RadioButtons from '../components/RadioButtons'
 import Toggle from '../components/Toggle'
 import LikeButton from '../components/LikeButton'
+import RateButton from '../components/RateButton'
+import Guests from '../components/Guests'
 export default {
   components: {
+    Guests,
+    RateButton,
     LikeButton,
     Toggle,
     RadioButtons,
@@ -218,7 +230,7 @@ export default {
   width: 266px;
 }
 .ElementsContainerMarginTop{margin-top: 40px}
-.DropdownMt {margin-top: 60px}
+.DropdownMt {margin-top: 118px}
 .DropdownMb {margin-bottom: 20px}
 .DropdownRoomsContainer {margin-bottom: 54px}
 .FormElementsCheckboxListMb {margin-bottom: 34px}
@@ -233,5 +245,11 @@ export default {
   justify-content: space-between;
   width: 90px;
   margin-bottom: 44px;
+}
+.FormElementsRateButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin-bottom: 196px;
 }
 </style>
