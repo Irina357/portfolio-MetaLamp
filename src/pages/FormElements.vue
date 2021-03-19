@@ -141,6 +141,10 @@
           <p class="FormElementsTitle">Dropdown</p>
         </div>
       <Guests />
+      <div class="FormElementsRichBtnMtMb">
+          <p class="FormElementsTitle">rich checkbox buttons</p>
+        </div>
+      <RichCeckboxButtons />
     </div>
     <div class="FormElementsColumnRight">
       <div class="CheckboxListTitleContainer">
@@ -160,8 +164,10 @@ import Toggle from '../components/Toggle'
 import LikeButton from '../components/LikeButton'
 import RateButton from '../components/RateButton'
 import Guests from '../components/Guests'
+import RichCeckboxButtons from '../components/RichCeckboxButtons'
 export default {
   components: {
+    RichCeckboxButtons,
     Guests,
     RateButton,
     LikeButton,
@@ -251,5 +257,9 @@ export default {
   justify-content: space-between;
   width: 260px;
   margin-bottom: 196px;
+}
+.FormElementsRichBtnMtMb {
+  margin-top: 114px;
+  margin-bottom: 16px;
 }
 </style>
