@@ -180,6 +180,10 @@
       <div class="FormElementGuestsContainer">
       <Guests />
       </div>
+      <div class='FormElementsRadioBtnContainer FormElementsRichBtnMtMb'>
+        <p class="CheckboxListTitle">bullet list</p>
+      </div>
+      <BulletList />
     </div>
   </div>
 </template>
@@ -201,8 +205,10 @@ import ButtonDisable from '../components/ButtonDisable'
 import ButtonBackgroundNone from '../components/ButtonBackgroundNone'
 import ButtonBackgoundNoneDisable from '../components/ButtonBackgoundNoneDisable'
 import ButtonBig from '../components/ButtonBig'
+import BulletList from '../components/BulletList'
 export default {
   components: {
+    BulletList,
     ButtonBig,
     ButtonBackgoundNoneDisable,
     ButtonBackgroundNone,
@@ -328,7 +334,7 @@ export default {
   margin-top: 230px;
 }
 .PaginatorRemove {
-  height: 40px;
+  height: 168px;
   width: 150px;
   border: #6fcf97 1px solid;
 }
