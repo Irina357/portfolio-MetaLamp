@@ -1,7 +1,10 @@
 <template>
   <div>
     <ul class="BulletListUl" v-for="(text, index) in this.bulletList" :key="index">
-      <li class="BulletListText">{{ text.bulletListText}}</li>
+         <svg width="10" height="10">
+  <circle cx="5" cy="5" r="4" fill="yellow" />
+</svg>
+      <li class="BulletListText">{{ text.bulletListText }}</li>
     </ul>
   </div>
 </template>

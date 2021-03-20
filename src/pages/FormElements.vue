@@ -1,5 +1,6 @@
 <template>
-  <div class="ContainerAll FormElementsContainer">
+  <div class="ContainerAll">
+    <div class="FormElementsContainer">
     <Logo/>
     <div class="FormElementsColumnLeft">
       <div class="FormElementsTitleContainer">
@@ -104,10 +105,7 @@
           </button>
         </div>
       </div>
-      <div class="CheckboxListContainer">
       <CheckboxList/>
-      </div>
-      <Advantage />
     </div>
     <div class="FormElementsColumnCentre">
       <div class="CheckboxListTitleContainer CheckboxButtonMb">
@@ -185,6 +183,15 @@
       </div>
       <BulletList />
     </div>
+    </div>
+    <div class="FormElementsContainerTop">
+      <div class="FormElementsContainerTopColumnLeft">
+        <Advantage />
+      </div>
+      <div class="FormElementsContainerTopColumnRight">
+        <Review />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -206,8 +213,10 @@ import ButtonBackgroundNone from '../components/ButtonBackgroundNone'
 import ButtonBackgoundNoneDisable from '../components/ButtonBackgoundNoneDisable'
 import ButtonBig from '../components/ButtonBig'
 import BulletList from '../components/BulletList'
+import Review from '../components/Review'
 export default {
   components: {
+    Review,
     BulletList,
     ButtonBig,
     ButtonBackgoundNoneDisable,
@@ -232,12 +241,15 @@ export default {
 <style lang="less">
 @import '../style/StyleAll';
 @import '../style/variables';
-.FormElementsContainer {
+.FormElementsContainer, .FormElementsContainerTop {
   display: flex;
   justify-content: space-between;
   padding-left: 141px;
   padding-top: 143px;
   padding-right: 141px;
+}
+.FormElementsContainerTop {
+  padding-top: 105px;
 }
 .FormElementsColumnLeft, .FormElementsColumnCentre, .FormElementsColumnRight {
   max-width: 320px;
@@ -310,7 +322,6 @@ export default {
   margin-top: 114px;
   margin-bottom: 16px;
 }
-.CheckboxListContainer {margin-bottom: 100px}
 .ButtonContainer {
   display: flex;
   justify-content: space-between;
