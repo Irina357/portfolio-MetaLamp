@@ -159,7 +159,19 @@
       <Button />
       <ButtonDisable />
       </div>
-      <ButtonBackgroundNone />
+      <div class="ButtonContainer">
+        <ButtonBackgroundNone/>
+        <ButtonBackgoundNoneDisable/>
+      </div>
+      <div class="ButtonContainer ButtonTextContainer">
+        <div>
+          <p class="FormElementBtnTextPurle">click mi</p>
+        </div>
+        <div>
+          <p class="FormElementBtnTextDark">click mi</p>
+        </div>
+      </div>
+      <ButtonBig />
     </div>
   </div>
 </template>
@@ -179,8 +191,12 @@ import Advantage from '../components/Advantage'
 import Button from '../components/Button'
 import ButtonDisable from '../components/ButtonDisable'
 import ButtonBackgroundNone from '../components/ButtonBackgroundNone'
+import ButtonBackgoundNoneDisable from '../components/ButtonBackgoundNoneDisable'
+import ButtonBig from '../components/ButtonBig'
 export default {
   components: {
+    ButtonBig,
+    ButtonBackgoundNoneDisable,
     ButtonBackgroundNone,
     ButtonDisable,
     Button,
@@ -287,5 +303,17 @@ export default {
   width: 217px;
   margin-bottom: 30px;
   margin-top: 14px;
+}
+.ButtonTextContainer {
+  justify-content: start;
+}
+.FormElementBtnTextPurle {
+  .fontSize12;
+  color: @colorPurle;
+  margin-right: 20px;
+}
+.FormElementBtnTextDark {
+  .fontSize12;
+  opacity: .5;
 }
 </style>

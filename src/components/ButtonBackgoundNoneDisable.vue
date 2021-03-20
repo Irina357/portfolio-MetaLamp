@@ -2,7 +2,7 @@
   <div class="ButtonBackgroundNoneContainer">
     <button type="button" class="buttonBackgroundNone" v-bind:class="{buttonDisable: isButtonDisabled}"></button>
     <div class="buttonBackgroundWaiteContainer">
-      <button type="button" class="buttonBackgroundWaite" @click="addDisable">click mi</button>
+      <button type="button" class="buttonBackgroundWaite">click mi</button>
     </div>
   </div>
 </template>
@@ -10,13 +10,10 @@
 export default {
   data () {
     return {
-      isButtonDisabled: false
+      isButtonDisabled: true
     }
   },
   methods: {
-    addDisable () {
-      this.isButtonDisabled = !this.isButtonDisabled
-    }
   }
 }
 </script>
