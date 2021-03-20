@@ -172,6 +172,14 @@
         </div>
       </div>
       <ButtonBig />
+      <div class='FormElementsRadioBtnContainer'>
+        <p class="CheckboxListTitle">paginator</p>
+      </div>
+      <div class="PaginatorRemove">
+      </div>
+      <div class="FormElementGuestsContainer">
+      <Guests />
+      </div>
     </div>
   </div>
 </template>
@@ -315,5 +323,13 @@ export default {
 .FormElementBtnTextDark {
   .fontSize12;
   opacity: .5;
+}
+.FormElementGuestsContainer {
+  margin-top: 230px;
+}
+.PaginatorRemove {
+  height: 40px;
+  width: 150px;
+  border: #6fcf97 1px solid;
 }
 </style>
