@@ -150,8 +150,12 @@
     </div>
     <div class="FormElementsColumnRight">
       <div class="CheckboxListTitleContainer">
-        <p class="CheckboxListTitle">radio buttons</p>
+        <p class="CheckboxListTitle">rance slider</p>
       </div>
+      <div class="CheckboxListTitleContainer ButtonContainer">
+        <p class="CheckboxListTitle">buttons</p>
+      </div>
+      <Button />
     </div>
   </div>
 </template>
@@ -168,8 +172,10 @@ import RateButton from '../components/RateButton'
 import Guests from '../components/Guests'
 import RichCeckboxButtons from '../components/RichCeckboxButtons'
 import Advantage from '../components/Advantage'
+import Button from '../components/Button'
 export default {
   components: {
+    Button,
     Advantage,
     RichCeckboxButtons,
     Guests,
@@ -267,4 +273,10 @@ export default {
   margin-bottom: 16px;
 }
 .CheckboxListContainer {margin-bottom: 100px}
+.ButtonContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 217px;
+  margin-bottom: 30px;
+}
 </style>
