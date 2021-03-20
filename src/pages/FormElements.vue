@@ -152,10 +152,14 @@
       <div class="CheckboxListTitleContainer">
         <p class="CheckboxListTitle">rance slider</p>
       </div>
-      <div class="CheckboxListTitleContainer ButtonContainer">
+      <div class="CheckboxListTitleContainer">
         <p class="CheckboxListTitle">buttons</p>
       </div>
+      <div class="ButtonContainer">
       <Button />
+      <ButtonDisable />
+      </div>
+      <ButtonBackgroundNone />
     </div>
   </div>
 </template>
@@ -173,8 +177,12 @@ import Guests from '../components/Guests'
 import RichCeckboxButtons from '../components/RichCeckboxButtons'
 import Advantage from '../components/Advantage'
 import Button from '../components/Button'
+import ButtonDisable from '../components/ButtonDisable'
+import ButtonBackgroundNone from '../components/ButtonBackgroundNone'
 export default {
   components: {
+    ButtonBackgroundNone,
+    ButtonDisable,
     Button,
     Advantage,
     RichCeckboxButtons,
@@ -278,5 +286,6 @@ export default {
   justify-content: space-between;
   width: 217px;
   margin-bottom: 30px;
+  margin-top: 14px;
 }
 </style>
