@@ -150,6 +150,7 @@
       <div class="CheckboxListTitleContainer">
         <p class="CheckboxListTitle">rance slider</p>
       </div>
+      <Range />
       <div class="CheckboxListTitleContainer">
         <p class="CheckboxListTitle">buttons</p>
       </div>
@@ -214,8 +215,10 @@ import ButtonBackgoundNoneDisable from '../components/ButtonBackgoundNoneDisable
 import ButtonBig from '../components/ButtonBig'
 import BulletList from '../components/BulletList'
 import Review from '../components/Review'
+import Range from '../components/Range'
 export default {
   components: {
+    Range,
     Review,
     BulletList,
     ButtonBig,

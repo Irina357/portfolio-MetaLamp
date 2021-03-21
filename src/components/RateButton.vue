@@ -52,7 +52,7 @@ export default {
 @import '../style/StyleAll';
 
 .RateButtonsContainer {
-  color: mediumvioletred;
+  color: green;
   display: flex;
   justify-content: space-between;
   width: 120px;
