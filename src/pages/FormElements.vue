@@ -70,9 +70,9 @@
           <p class="FormElementsTitle">Subscription text field</p>
         </div>
       </div>
-      <div class="inputMiddle SelectTitle FormElementsSubscriptionPadding FormElementsSubscriptionMb">
+      <div class="inputMiddle SelectTitle FormElementsSubscriptionPadding FormElementsSubscriptionWidth">
         <input type="email" class="inputMiddle" placeholder="email">
-        <button type="button" class="SelectBtn"><img src="../assets/arrow_forward.png"></button>
+        <button type="button" class="SelectBtn FormElementsSubscriptionBtn"><img src="../assets/arrow_forward.png"></button>
       </div>
       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer DropdownMt">
         <div>
@@ -137,7 +137,7 @@
       <RateButton />
       <RateButton />
       </div>
-      <div>
+      <div class="FormElementsTitleContainer">
           <p class="FormElementsTitle">Dropdown</p>
         </div>
       <Guests />
@@ -147,10 +147,12 @@
       <RichCeckboxButtons />
     </div>
     <div class="FormElementsColumnRight">
-      <div class="CheckboxListTitleContainer">
-        <p class="CheckboxListTitle">rance slider</p>
-      </div>
+      <div class="FormElementRangeContainer">
+        <div class="FormElementRangeTitle">
+          <p>Range</p>
+        </div>
       <Range />
+      </div>
       <div class="CheckboxListTitleContainer">
         <p class="CheckboxListTitle">buttons</p>
       </div>
@@ -177,6 +179,9 @@
       <div class="PaginatorRemove">
       </div>
       <div class="FormElementGuestsContainer">
+        <div class="FormElementsTitleContainer">
+          <p class="FormElementsTitle">Dropdown</p>
+        </div>
       <Guests />
       </div>
       <div class='FormElementsRadioBtnContainer FormElementsRichBtnMtMb'>
@@ -299,6 +304,13 @@ export default {
   width: 266px;
 }
 .ElementsContainerMarginTop{margin-top: 40px}
+.FormElementsSubscriptionWidth {
+  width: 266px;
+  padding-left: 0;
+}
+.FormElementsSubscriptionBtn {
+  margin-left: -44px;
+}
 .DropdownMt {margin-top: 118px}
 .DropdownMb {margin-bottom: 20px}
 .DropdownRoomsContainer {margin-bottom: 54px}
@@ -351,5 +363,13 @@ export default {
   height: 168px;
   width: 150px;
   border: #6fcf97 1px solid;
+}
+.FormElementRangeContainer {
+  position: relative;
+}
+.FormElementRangeTitle {
+  position: absolute;
+  .fontSize12;
+  font-weight: bold;
 }
 </style>

@@ -1,23 +1,23 @@
 <template>
   <div>
-  <div class="AdvantageContainer">
-    <div class="AdvantageImgContainer">
-      <img src="../assets/insert_emoticon-24px.svg" class="AdvantageImg">
-    </div>
-    <div class="AdvantageText">
-      <p class="AdvantageTextBold">комфорт</p>
-      <p>Звукопоглощяющие стены</p>
-    </div>
-  </div>
     <div class="AdvantageContainer">
-    <div class="AdvantageImgContainer">
-      <img src="../assets/location_city-24px.svg" class="AdvantageImg">
+      <div class="AdvantageImgContainer">
+        <img src="../assets/insert_emoticon-24px.svg" class="AdvantageImg" alt="Человечек">
+      </div>
+      <div class="AdvantageText">
+        <p class="AdvantageTextBold">комфорт</p>
+        <p>Звукопоглощяющие стены</p>
+      </div>
     </div>
-    <div class="AdvantageText">
-      <p class="AdvantageTextBold">комфорт</p>
-      <p>Звукопоглощяющие стены</p>
+    <div class="AdvantageContainer">
+      <div class="AdvantageImgContainer">
+        <img src="../assets/location_city-24px.svg" class="AdvantageImg" alt="Город">
+      </div>
+      <div class="AdvantageText">
+        <p class="AdvantageTextBold">комфорт</p>
+        <p>Звукопоглощяющие стены</p>
+      </div>
     </div>
-  </div>
   </div>
 </template>
 <script>

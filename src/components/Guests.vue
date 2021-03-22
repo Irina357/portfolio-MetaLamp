@@ -120,6 +120,7 @@ export default {
   border-bottom-right-radius: 4px;
   width: 320px;
   height: 159px;
+  box-shadow: 0 10px 20px rgba(31,32,65,0.05);
 }
 .GustsContainerBtn {
   display: flex;

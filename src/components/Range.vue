@@ -1,12 +1,19 @@
 <template>
   <div>
-    <div class="RangeContainerAll">
-      <div class="RangeContainer">
-        <div>
-          <label for="input1">
-            Ширина: {{ imgSize.currentWigth }}
+    <div class="RangeLabelContainer">
+      <div>
+          <label for="input1" class="RangeLabel RangeLabelLeft">
+            {{ imgSize.currentWigth }} -
           </label>
         </div>
+      <div>
+          <label for="input2" class="RangeLabel RangeLabelRight">
+            {{ imgSize1.currentWigth }}
+          </label>
+        </div>
+    </div>
+    <div class="RangeContainerAll">
+      <div class="RangeContainer">
         <div>
           <input type="range" :value="imgSize.currentWigth" :min="imgSize.minWight" :max="imgSize.maxWight" id="input1"
                  @input="imgSize.currentWigth = $event.target.value" class="Range">
@@ -17,11 +24,6 @@
         </div>
       </div>
       <div class="RangeContainer">
-        <div>
-          <label for="input2">
-            Ширина: {{ imgSize1.currentWigth }}
-          </label>
-        </div>
         <div>
           <input type="range" :value="imgSize1.currentWigth" :min="imgSize1.minWight" :max="imgSize1.maxWight"
                  id="input2"
@@ -44,7 +46,7 @@ export default {
         minWight: 0,
         maxHeigth: 300,
         minHeigth: 100,
-        currentWigth: 120,
+        currentWigth: 126,
         currentHeigth: 200
       },
       imgSize1: {
@@ -74,7 +76,6 @@ export default {
 <style lang="less">
 @import '../style/variables';
 @import '../style/StyleAll';
-
 #input1 {
   overflow: hidden;
   width: 128px;
@@ -128,9 +129,16 @@ export default {
   position: relative;
   height: 47px;
 }
+.RangeLabelContainer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 266px;
+  height: 35px;
+}
 .ScaleDark {
   position: absolute;
-  top: 24px;
+  top: 6px;
   width: 98px;
   height: 4px;
   background: white;
@@ -141,8 +149,8 @@ export default {
 }
 .ScaleGreen {
   position: absolute;
-  top: 24px;
-  left: 2px;
+  top: 6px;
+  left: 0;
   width: 131px;
   height: 6px;
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
@@ -194,21 +202,16 @@ export default {
 }
 .ScaleDark1 {
   position: absolute;
-  top: 24px;
-  left: -10px;
+  top: 6px;
+  left: -8px;
   width: 130px;
   height: 6px;
   background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-  border-radius: 3px;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
   z-index: 4;
 }
 .ScaleGreen1 {
   position: absolute;
-  top: 24px;
+  top: 6px;
   left: 3px;
   width: 123px;
   height: 4px;
@@ -216,5 +219,16 @@ export default {
   border: rgba(31,32,65,0.25) 1px solid;
   border-radius: 3px;
   z-index: 1;
+}
+.RangeLabel {
+  position: absolute;
+  .fontSize12;
+  opacity: .5;
+}
+.RangeLabelLeft {
+  left: 218px;
+}
+.RangeLabelRight {
+  left: 248px;
 }
 </style>

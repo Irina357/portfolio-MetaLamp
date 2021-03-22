@@ -1,9 +1,16 @@
 <template>
-  <div class="RateButtonsContainer">
-    <div v-for="(star, index) in this.stars" :key="index">
-    <div @click="addStartStatus(index)">
-      <img src="../assets/star_border-24px.svg" class="RateButtonsStar" v-bind:class="{StarActive: star.starStatus}">
-    </div>
+  <div>
+    <div class="RateButtonsContainer">
+      <div v-for="(star, index) in this.stars" :key="index">
+        <div @click="addStartStatus(index)">
+          <img src="../assets/grade-24px.svg" class="RateButtonsStar" v-show="star.starStatus" alt="star">
+        </div>
+      </div>
+      <div v-for="(star, index) in this.starsBackground" :key="index">
+        <div @click="addStartStatus(index)">
+          <img src="../assets/star_border-24px.svg" class="RateButtonsStar" v-show="star.starStatus" alt="star">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -12,6 +19,28 @@ export default {
   data () {
     return {
       stars: [
+        {
+          id: 0,
+          starStatus: true
+        },
+        {
+          id: 1,
+          starStatus: true
+        },
+        {
+          id: 2,
+          starStatus: true
+        },
+        {
+          id: 3,
+          starStatus: true
+        },
+        {
+          id: 4,
+          starStatus: true
+        }
+      ],
+      starsBackground: [
         {
           id: 0,
           starStatus: false
@@ -37,11 +66,17 @@ export default {
   },
   methods: {
     addStartStatus (index) {
-      this.stars.forEach(function (star1, i) {
-        star1.starStatus = false
+      this.stars.forEach(function (item, i) {
+        item.starStatus = false
       })
       this.stars.forEach(function (item, i) {
-        if (i < index + 1) { item.starStatus = true };
+        if (i <= index) { item.starStatus = true }
+      })
+      this.starsBackground.forEach(function (item, i) {
+        item.starStatus = true
+      })
+      this.starsBackground.forEach(function (item, i) {
+        if (i <= index) { item.starStatus = false }
       })
     }
   }
@@ -54,7 +89,7 @@ export default {
 .RateButtonsContainer {
   color: green;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 120px;
 }
 .RateButtonsStar {

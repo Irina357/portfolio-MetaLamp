@@ -89,6 +89,7 @@ export default {
   .DropdownContainer;
   width: 266px;
   height: 119px;
+  box-shadow: 0 10px 20px rgba(31,32,65,0.05);
 }
 .SelectTitleDropdownShow {
   border: rgba(31,32,65,0.5) 1px solid !important;
