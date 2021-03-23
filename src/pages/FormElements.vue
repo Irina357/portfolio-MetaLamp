@@ -3,6 +3,8 @@
     <div class="FormElementsContainer">
     <Logo/>
     <div class="FormElementsColumnLeft">
+      <div class="FormElementContainerMax1000">
+        <div>
       <div class="FormElementsTitleContainer">
         <div>
           <p class="FormElementsTitle">Text Field</p>
@@ -74,6 +76,8 @@
         <input type="email" class="inputMiddle" placeholder="email">
         <button type="button" class="SelectBtn FormElementsSubscriptionBtn"><img src="../assets/arrow_forward.png"></button>
       </div>
+          </div>
+      <div>
       <div class="FormElementsTitleContainer ElementsContainerMarginTop InputMiddleContainer DropdownMt">
         <div>
           <p class="FormElementsTitle">Dropdown</p>
@@ -106,8 +110,12 @@
         </div>
       </div>
       <CheckboxList/>
+        </div>
+      </div>
     </div>
     <div class="FormElementsColumnCentre">
+      <div class="FormElementContainerMax1000 FormElementContainerMax1000Pt">
+        <div>
       <div class="CheckboxListTitleContainer CheckboxButtonMb">
         <p class="CheckboxListTitle">checkbox buttons</p>
       </div>
@@ -137,6 +145,8 @@
       <RateButton />
       <RateButton />
       </div>
+      </div>
+      <div>
       <div class="FormElementsTitleContainer">
           <p class="FormElementsTitle">Dropdown</p>
         </div>
@@ -145,8 +155,12 @@
           <p class="FormElementsTitle">rich checkbox buttons</p>
         </div>
       <RichCeckboxButtons />
+      </div>
+      </div>
     </div>
     <div class="FormElementsColumnRight">
+      <div class="FormElementContainerMax1000">
+        <div>
       <div class="FormElementRangeContainer">
         <div class="FormElementRangeTitle">
           <p>Range</p>
@@ -178,6 +192,8 @@
       </div>
       <div class="PaginatorRemove">
       </div>
+      </div>
+      <div>
       <div class="FormElementGuestsContainer">
         <div class="FormElementsTitleContainer">
           <p class="FormElementsTitle">Dropdown</p>
@@ -188,6 +204,8 @@
         <p class="CheckboxListTitle">bullet list</p>
       </div>
       <BulletList />
+    </div>
+    </div>
     </div>
     </div>
     <div class="FormElementsContainerTop">
@@ -255,35 +273,92 @@ export default {
   padding-left: 141px;
   padding-top: 143px;
   padding-right: 141px;
+  @media (min-width: 1001px) and (max-width: 1439px) {
+    justify-content: space-around;
+    padding-left: 2%;
+    padding-right: 0;
+  }
+  @media (max-width: 1000px) {
+    display: inline-block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (max-width: 700px) {
+    display: inline-block;
+    width: 320;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .FormElementsContainerTop {
   padding-top: 105px;
+    @media (max-width: 700px) {
+   display: inline-block;
+    width: 100%;
+  }
+}
+.FormElementsContainerTopColumnLeft, .FormElementsContainerTopColumnRight {
+    @media (max-width: 700px) {
+    width: 320px;
+    margin: 0 auto;
+  }
 }
 .FormElementsColumnLeft, .FormElementsColumnCentre, .FormElementsColumnRight {
-  max-width: 320px;
+  width: 320px;
   margin-right: 126px;
+   @media (min-width: 700px) and (max-width: 1439px) {
+     width: 700px;
+     margin: 0 auto;
+     @media (max-width: 699px) {
+       margin: 0 auto;
+  }
+  }
+}
+.FormElementsColumnLeft {
+    @media (max-width: 699px) {
+       margin: 0 auto;
+  }
 }
 .FormElementsColumnCentre {
   margin-right: 72px;
+   @media (min-width: 700px) and (max-width: 1439px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) {
+       margin: 0 auto;
+  }
 }
 .FormElementsColumnRight {
   margin: 0;
+   @media (min-width: 700px) and (max-width: 1439px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 700px) {
+       margin: 0 auto;
+  }
+}
+.FormElementContainerMax1000 {
+     @media (max-width: 1000px) {
+       margin: 0 auto;
+       width: 700px;
+    display: flex;
+       justify-content: space-between;
+  }
+  @media (max-width: 700px) {
+       margin: 0 auto;
+    display: inline-block;
+    width: 320px;
+  }
+}
+.FormElementContainerMax1000Pt {
+  padding-top: 40px;
 }
 .FormElementsTitleContainer {
   display: flex;
   justify-content: space-between;
   width: 320px;
   margin-bottom: 5px;
-}
-.inputBig {
-  .inputLarge;
-  margin-bottom: 20px;
-}
-.inputLargeMarginBottom {
-  margin-bottom: 20px;
-}
-.inputBigMarginBottom {
-  margin-bottom: 0;
 }
 .FormElementsTitle {
   .fontSize12
@@ -311,7 +386,12 @@ export default {
 .FormElementsSubscriptionBtn {
   margin-left: -44px;
 }
-.DropdownMt {margin-top: 118px}
+.DropdownMt {
+  margin-top: 118px;
+    @media (max-width: 1000px) {
+    margin-top: 0;
+  }
+}
 .DropdownMb {margin-bottom: 20px}
 .DropdownRoomsContainer {margin-bottom: 54px}
 .FormElementsCheckboxListMb {margin-bottom: 34px}
@@ -332,6 +412,9 @@ export default {
   justify-content: space-between;
   width: 260px;
   margin-bottom: 196px;
+  @media (max-width: 1000px) {
+      margin-bottom: 40px;
+  }
 }
 .FormElementsRichBtnMtMb {
   margin-top: 114px;
@@ -358,6 +441,9 @@ export default {
 }
 .FormElementGuestsContainer {
   margin-top: 230px;
+  @media (max-width: 1000px) {
+      margin-top: 0;
+  }
 }
 .PaginatorRemove {
   height: 168px;
