@@ -26,7 +26,6 @@ export default {
 
 .ButtonBackgroundNoneContainer {
   position: relative;
-
   button {
     width: 99px;
     height: 44px;

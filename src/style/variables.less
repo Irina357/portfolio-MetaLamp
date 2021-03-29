@@ -7,6 +7,14 @@
   font-family: Montserrat_Light Arial;
   src: url('../assets/Font/Montserrat_Light.ttf');
 }
+// Разрешение экрана
+@before-w660: ~"(max-width: 659px)";
+@before-w768: ~"(max-width: 767px)";
+@before-w876: ~"(max-width: 875px)";
+@before-w960: ~"(max-width: 959px)";
+@before-w1170: ~"(max-width: 1169px)";
+@before-w1340: ~"(max-width: 1339px)";
+@before-w1440: ~"(max-width: 1439px)";
 //Colors
 @colorDark: #1f2041;
 @colorPurle: #bc9cff;
@@ -36,6 +44,7 @@
 .green() {
   background: @colorGreen;
 }
+//Шрифты и размер текста
 .fontSize24() {
   font-family: Montserrat Arial;
   font-size: 24px;

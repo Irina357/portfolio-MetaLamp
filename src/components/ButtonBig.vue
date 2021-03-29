@@ -1,12 +1,15 @@
 <template>
   <div class="ButtonBigContainer">
-    <button type="button">перейти к оплате</button>
+    <button type="button">{{ this.text}}</button>
     <img src="../assets/arrow_forwardwait.png">
   </div>
 </template>
 <script>
 export default {
   data () {
+    return {
+      text: 'перейти к оплате'
+    }
   }
 }
 </script>
@@ -23,7 +26,8 @@ export default {
   border: none;
   .fontSize12;
   color: white;
-  }
+  }npm run serve
+
   img {
     position: absolute;
   top: 13px;
