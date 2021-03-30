@@ -1,16 +1,13 @@
-<template>
+text<template>
   <div class="ButtonBigContainer">
-    <button type="button">{{ this.text}}</button>
+    <button type="button">{{ text}}</button>
     <img src="../assets/arrow_forwardwait.png">
   </div>
 </template>
 <script>
 export default {
-  data () {
-    return {
-      text: 'перейти к оплате'
-    }
-  }
+  name: 'ButtonBig',
+  props: ['text']
 }
 </script>
 <style lang="less">

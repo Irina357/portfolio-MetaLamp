@@ -2,12 +2,13 @@
   <div class="ButtonBackgroundNoneContainer">
     <button type="button" class="buttonBackgroundNone" v-bind:class="{buttonDisable: isButtonDisabled}"></button>
     <div class="buttonBackgroundWaiteContainer">
-      <button type="button" class="buttonBackgroundWaite">click mi</button>
+      <button type="button" class="buttonBackgroundWaite">{{text}}</button>
     </div>
   </div>
 </template>
 <script>
 export default {
+  props: ['text'],
   data () {
     return {
       isButtonDisabled: true
@@ -20,7 +21,8 @@ export default {
 <style lang="less">
 @import '../style/variables';
 @import '../style/StyleAll';
-.ButtonBackgroundNoneContainer {
+.ButtonBackgroundNoneContainer {npm run serve
+
   position: relative;
 }
 .buttonBackgroundWaiteContainer {

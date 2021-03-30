@@ -15,8 +15,12 @@
         </ul>
       </nav>
       <div class="HeaderEntry">
-        <ButtonBackgroundNone class="headerBtnSize"/>
-        <ButtonBig class="headerBtnBigSize"/>
+        <ButtonBackgroundNone class="headerBtnSize"
+          :text="text"
+        />
+        <ButtonBig class="headerBtnBigSize"
+        :text="bigText"
+        />
       </div>
     </header>
   </div>
@@ -26,6 +30,12 @@
 import ButtonBackgroundNone from '../components/ButtonBackgroundNone'
 import ButtonBig from '../components/ButtonBig'
 export default {
+  data () {
+    return {
+      bigText: 'entry',
+      text: 'check in'
+    }
+  },
   components: {
     ButtonBackgroundNone,
     ButtonBig
@@ -39,11 +49,10 @@ export default {
 
 header {
   box-sizing: border-box;
-  display: flex;
+  .ContainerFlexBetween;
   align-items: center;
   height: 70px;
   width: 100%;
-  justify-content: space-between;
   padding-left: 9.7%;
   padding-right: 9.7%;
   background: white;
@@ -57,14 +66,15 @@ header {
     padding: 0;
   }
 }
+
 .HeaderLogo {
   display: flex;
   justify-content: start;
   align-items: center;
   max-width: 27%;
-   @media @before-w660 {
-     padding-left: 5%;
-     height: 50px;
+  @media @before-w660 {
+    padding-left: 5%;
+    height: 50px;
   }
 }
 
@@ -72,10 +82,10 @@ header {
   width: 40px;
   height: 40px;
   margin-right: 12.5px;
-   @media @before-w876 {
+  @media @before-w876 {
     width: 30px;
-  height: 30px;
-     margin-right: 5px;
+    height: 30px;
+    margin-right: 5px;
   }
 }
 
@@ -84,7 +94,7 @@ header {
   height: 12.03px;
   @media @before-w876 {
     width: 40px;
-  height: 12px;
+    height: 12px;
   }
 }
 
@@ -100,25 +110,26 @@ nav {
     background: white;
     width: 100%;
     padding-left: 5%;
-     padding-right: 5%;
+    padding-right: 5%;
   }
+
   ul {
     display: flex;
     list-style-type: none;
-     @media @before-w660 {
-    width: 100%;
-  }
+    @media @before-w660 {
+      width: 100%;
+    }
   }
 
   li {
     margin-right: 20px;
     @media @before-w960 {
-    margin-right: 10px;
-  }
-     @media @before-w660 {
-    width: 18%;
-       margin-right: 0;
-  }
+      margin-right: 10px;
+    }
+    @media @before-w660 {
+      width: 18%;
+      margin-right: 0;
+    }
   }
 
   a {
@@ -126,8 +137,8 @@ nav {
     color: @colorDark;
     opacity: .5;
     @media @before-w768 {
-    font-size: 12px;
-  }
+      font-size: 12px;
+    }
   }
 
   a:active {
@@ -139,17 +150,17 @@ nav {
   height: 70px;
   display: flex;
   align-items: center;
-   @media @before-w660 {
+  @media @before-w660 {
     justify-content: space-between;
-     height: 50px;
-     padding-left: 5%;
-     padding-right: 5%;
+    height: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
 .headerBtnSize.ButtonBackgroundNoneContainer {
   height: 34px;
-      @media @before-w876 {
+  @media @before-w876 {
     height: 24px;
   }
 
@@ -158,14 +169,14 @@ nav {
     height: 34px;
     margin-right: 20px;
     @media @before-w960 {
-    margin-right: 10px;
-  }
+      margin-right: 10px;
+    }
     @media @before-w876 {
-    font-size: 10px;
+      font-size: 10px;
       width: 77px;
-    height: 24px;
-    margin-right: 10px;
-  }
+      height: 24px;
+      margin-right: 10px;
+    }
   }
 
   .buttonBackgroundWaiteContainer {
@@ -174,10 +185,10 @@ nav {
       width: 83px;
       height: 30px;
       margin: 0;
-       @media @before-w876 {
-      width: 73px;
-    height: 20px;
-  }
+      @media @before-w876 {
+        width: 73px;
+        height: 20px;
+      }
     }
   }
 }

@@ -1,10 +1,11 @@
 <template>
   <div>
-    <button type="button" class="button" @click="addDisable" v-bind:class="{buttonDisable: isButtonDisabled}">click mi</button>
+    <button type="button" class="button" @click="addDisable" v-bind:class="{buttonDisable: isButtonDisabled}">{{text}}</button>
   </div>
 </template>
 <script>
 export default {
+  props: ['text'],
   data () {
     return {
       isButtonDisabled: false

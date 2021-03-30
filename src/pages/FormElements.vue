@@ -173,12 +173,12 @@
               <p class="CheckboxListTitle">buttons</p>
             </div>
             <div class="ButtonContainer">
-              <Button/>
-              <ButtonDisable/>
+              <Button :text="text"/>
+              <ButtonDisable :text="text"/>
             </div>
             <div class="ButtonContainer">
-              <ButtonBackgroundNone/>
-              <ButtonBackgoundNoneDisable/>
+              <ButtonBackgroundNone :text="text"/>
+              <ButtonBackgoundNoneDisable :text="text"/>
             </div>
             <div class="ButtonContainer ButtonTextContainer">
               <div>
@@ -188,7 +188,7 @@
                 <p class="FormElementBtnTextDark">click mi</p>
               </div>
             </div>
-            <ButtonBig/>
+            <ButtonBig :text="bigText"/>
             <div class='FormElementsRadioBtnContainer'>
               <p class="CheckboxListTitle">paginator</p>
             </div>
@@ -244,6 +244,12 @@ import BulletList from '../components/BulletList'
 import Review from '../components/Review'
 import Range from '../components/Range'
 export default {
+  data () {
+    return {
+      text: 'click me',
+      bigText: 'перейти к оплате'
+    }
+  },
   components: {
     Range,
     Review,
@@ -273,8 +279,7 @@ export default {
 @import '../style/variables';
 
 .FormElementsContainer, .FormElementsContainerTop {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   padding-left: 141px;
   padding-top: 143px;
   padding-right: 141px;
@@ -304,8 +309,7 @@ export default {
 .FormElementsContainerTop {
   padding-top: 105px;
   @media (min-width: 700px) and (max-width: 1000px) {
-    display: flex;
-    justify-content: space-between;
+    .ContainerFlexBetween;
     width: 700px;
     margin: 0 auto;
     @media (max-width: 700px) {
@@ -358,8 +362,7 @@ export default {
   @media (max-width: 1000px) {
     margin: 0 auto;
     width: 700px;
-    display: flex;
-    justify-content: space-between;
+    .ContainerFlexBetween;
   }
   @media (max-width: 700px) {
     margin: 0 auto;
@@ -376,8 +379,7 @@ export default {
   }
 }
 .FormElementsTitleContainer {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   width: 320px;
   margin-bottom: 5px;
 }
@@ -388,8 +390,7 @@ export default {
   .fontSize12Opacity25
 }
 .FormElementsElementContainer {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   width: 320px;
   margin-bottom: 40px;
 }
@@ -435,14 +436,12 @@ export default {
   margin-top: 7px
 }
 .FormElementLikeButtonContainer {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   width: 90px;
   margin-bottom: 44px;
 }
 .FormElementsRateButtonContainer {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   width: 260px;
   margin-bottom: 196px;
   @media (max-width: 1000px) {
@@ -454,8 +453,7 @@ export default {
   margin-bottom: 16px;
 }
 .ButtonContainer {
-  display: flex;
-  justify-content: space-between;
+  .ContainerFlexBetween;
   width: 217px;
   margin-bottom: 30px;
   margin-top: 14px;
