@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="HeaderBoxShadow">
     <header>
       <div class="HeaderLogo">
         <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
@@ -46,6 +46,9 @@ export default {
 <style lang="less">
 @import '../style/StyleAll';
 @import '../style/variables';
+.HeaderBoxShadow {
+  box-shadow: 0 10px 20px rgba(31,32,65,0.05);
+}
 
 header {
   box-sizing: border-box;
