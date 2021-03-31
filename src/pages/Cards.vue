@@ -1,14 +1,24 @@
 <template>
-  <div>
-    <h1>Cards</h1>
+  <div class="ContainerAll">
+    <Header />
+    <Axios />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Axios from '../pages/Axios'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 export default {
+  components: {
+    Axios,
+    Header,
+    Footer
+  }
 }
 </script>
 
-<style scoped lang="less">
+<style lang="less">
 
 </style>
