@@ -19,5 +19,6 @@ export default {
 <style lang="less">
   .AxiosContainer {
     padding-top: 40px;
+    color: rosybrown;
   }
 </style>
