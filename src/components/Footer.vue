@@ -4,6 +4,8 @@
       <div class="FooterContainer">
         <div class="FooterLogo">
           <div class="FooterLogoContainer">
+            <img src="../assets/logoColorLeft.png" class="HeaderLogoCircleImgLeft">
+          <img src="../assets/logoColorRidth.png" class="HeaderLogoCircleImgRight">
             <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
             <img src="../assets/TOXIN.png" class="HeaderLogoImgText">
           </div>
@@ -30,7 +32,7 @@
           </ul>
         </div>
         <div class="FooterColumnRight">
-          <div>
+          <div class="FooterColumnRightUl">
           <ul>
             <li>Навигация</li>
             <li>О нас</li>
@@ -84,21 +86,32 @@ footer {
   .ContainerFlexBetween
 }
 .FooterContainer {
+  border: #6fcf97 1px solid;
   box-sizing: border-box;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 80px;
+  @media @before-w1440 {
+    flex-wrap: wrap;
+    width: 767px;
+    margin: 0 auto;
+  }
 }
 .FooterLogoContainer {
+  position: relative;
   align-items: center;
 }
 .FooterLogo {
+  border: rosybrown 1px solid;
   box-sizing: border-box;
   width: 25%;
   margin-right: 3.4%;
   p {
    .fontSize14;
     opacity: .75;
+  }
+   @media @before-w1440 {
+    width: 100%;
   }
 }
 .FooterLogoContainer {
@@ -108,7 +121,7 @@ footer {
 .FooterColumnLeft, .FooterColumnRight {
   box-sizing: border-box;
   width: 37%;
-  margin-right: 7%;
+  margin-right: 5%;
   ul {
     list-style-type: none;
     :first-child {
@@ -122,11 +135,20 @@ footer {
     margin-bottom: 20px;
   }
 }
+.FooterColumnLeft {
+  width: 30%;
+  border: mediumvioletred 1px solid;
+    @media @before-w1440 {
+    width: 40%;
+      margin-right: 0;
+  }
+}
 .FooterColumnRight {
-  width: 31.9%;
+  border: cornflowerblue 1px solid;
+  margin-right: 0;
+  width: 38%;
   display: flex;
   justify-content: space-between;
-
   ul {
     width: 149px;
     margin-right: 50px;
@@ -145,8 +167,14 @@ footer {
   }
 
   input {
-    width: 252px;
+    width: 260px;
   }
+   @media @before-w1440 {
+    width: 55%;
+  }
+}
+.FooterColumnRightUl {
+  width: 33%;
 }
 .FooterFooter {
   height: 70px;

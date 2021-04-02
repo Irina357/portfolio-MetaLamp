@@ -1,25 +1,15 @@
 <template>
   <div class="container_All">
-    <h1>Header</h1>
-    <div class="header_Container" >
-    <div>
-       <router-link :to="{name: 'Colors'}">Colors</router-link>
-     </div>
-    <div>
-       <router-link :to="{name: 'Form'}">Form</router-link>
-     </div>
-    <div>
-       <router-link :to="{name: 'Cards'}">Cards</router-link>
-     </div>
-    <div>
-       <router-link :to="{name: 'HeaderFooter'}">HeaderFooter</router-link>
-     </div>
-    </div>
+    <Header />
   </div>
 </template>
 
 <script>
+import Header from '../components/Header'
 export default {
+  components: {
+    Header
+  }
 }
 </script>
 
@@ -29,7 +19,6 @@ export default {
   max-width: 1440px;
   margin: 0 auto;
   box-sizing: border-box;
-  border: cornflowerblue 1px solid;
 }
 .header_Container {
   display: flex;

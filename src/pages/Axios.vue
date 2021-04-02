@@ -1,10 +1,22 @@
 <template>
   <div class="ContainerAll">
+    <div class="AxiosTitle">
+      <h4>Курс валют на</h4>
+      <div>
+        {{ day }}
+      </div>
+      <div>
+        <p>0</p>{{ month }}
+      </div>
+      <div>
+        {{ year }}
+      </div>
+    </div>
     <div class="Axsios">
-      <h4>Курс валют на {{ day}}{{year}}</h4>
       <ul>
         <li v-for="(str, index) in this.courses" :key="index">
-          <h6>{{str.ccy}}:</h6>  <p>Buy {{str.buy}},</p> Sale {{str.sale}}
+          <h6>{{ str.ccy }}:</h6>
+          <p>Buy {{ str.buy }},</p> Sale {{ str.sale }}
         </li>
       </ul>
     </div>
@@ -18,18 +30,20 @@ export default {
     return {
       courses: [],
       year: new Date().getFullYear(),
-      day: new Date().getDate()
+      day: new Date().getDate(),
+      month: new Date().getMonth() + 1
     }
   },
   mounted () {
-    axios.get(' https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5').then(response => (this.courses = response.data))
+    axios.get(' https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+      .then(response => (this.courses = response.data))
   }
 }
-
 </script>
 <style lang="less">
 @import '../style/StyleAll';
 @import '../style/variables';
+
 .Axsios {
   width: 150px;
   margin: 0 auto;
@@ -40,14 +54,26 @@ export default {
     .fontSize14;
     margin-bottom: 20px;
   }
-  h4 {
-    .fontSize24;
-    margin-bottom: 20px;
-    margin-top: 40px;
-  }
   h6 {
     .fontSize19;
     margin-bottom: 10px;
+  }
+}
+.AxiosTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 320px;
+  div {
+    display: flex;
+    margin-left: 5px;
+    .fontSize24;
+    color: @colorPurle;
+  }
+  h4 {
+    .fontSize24;
+    margin-right: 10px;
   }
 }
 </style>

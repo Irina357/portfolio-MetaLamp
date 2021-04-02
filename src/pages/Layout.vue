@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>Layouts</h2>
     <Header />
      <router-view></router-view>
   </div>
