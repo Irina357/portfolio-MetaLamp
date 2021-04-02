@@ -2,15 +2,19 @@
   <div class="HeaderBoxShadow">
     <header>
       <div class="HeaderLogo">
+        <div class="HeaderLogoCircle">
+          <img src="../assets/logoColorLeft.png" class="HeaderLogoCircleImgLeft">
+          <img src="../assets/logoColorRidth.png" class="HeaderLogoCircleImgRight">
         <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
+        </div>
         <img src="../assets/TOXIN.png" class="HeaderLogoImgText">
       </div>
       <nav>
         <ul>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Вакансии</a></li>
-          <li><a href="#">Новости</a></li>
+          <li><router-link :to="{name: 'Colors'}">Colors</router-link></li>
+          <li><router-link :to="{name: 'Form'}">Form</router-link></li>
+          <li><router-link :to="{name: 'Cards'}">Cards</router-link></li>
+          <li><router-link :to="{name: 'HeaderFooter'}">HeaderFooter</router-link></li>
           <li><a href="#">Соглашения</a></li>
         </ul>
       </nav>
@@ -48,6 +52,8 @@ export default {
 @import '../style/variables';
 .HeaderBoxShadow {
   box-shadow: 0 10px 20px rgba(31,32,65,0.05);
+  position: relative;
+  z-index: 50;
 }
 
 header {
@@ -80,7 +86,19 @@ header {
     height: 50px;
   }
 }
-
+.HeaderLogoCircle {
+  position: relative;
+}
+.HeaderLogoCircleImgLeft, .HeaderLogoCircleImgRight {
+  position: absolute;
+  top: 15.3px;
+}
+.HeaderLogoCircleImgLeft {
+  left: 9.4px;
+}
+.HeaderLogoCircleImgRight {
+  left: 21.47px;
+}
 .HeaderLogoImgImg {
   width: 40px;
   height: 40px;
