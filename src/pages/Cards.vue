@@ -1,5 +1,6 @@
 <template>
-  <div class="ContainerAll AxiosContainer">
+  <div class="ContainerAll">
+    <Header />
     <Axios />
     <Footer />
   </div>
@@ -7,17 +8,17 @@
 
 <script>
 import Axios from '../pages/Axios'
+import Header from '../components/Header'
 import Footer from '../components/Footer'
 export default {
   components: {
     Axios,
+    Header,
     Footer
   }
 }
 </script>
 
 <style lang="less">
-  .AxiosContainer {
-    padding-top: 40px;
-  }
+
 </style>
