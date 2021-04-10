@@ -283,43 +283,43 @@ export default {
   padding-left: 141px;
   padding-top: 143px;
   padding-right: 141px;
-  @media (min-width: 1001px) and (max-width: 1439px) {
+  @media @before-w1440 {
     justify-content: space-around;
     padding-left: 2%;
     padding-right: 0;
   }
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     display: inline-block;
     width: 100%;
     padding-left: 0;
     padding-right: 0;
   }
-  @media (max-width: 700px) {
+  @media @before-w700 {
     display: inline-block;
     padding-left: 0;
     padding-right: 0;
   }
 }
 .FormElementsContainerTopAll {
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     display: inline-block;
     width: 100%;
   }
 }
 .FormElementsContainerTop {
   padding-top: 105px;
-  @media (min-width: 700px) and (max-width: 1000px) {
+  @media @before-w1000 {
     .ContainerFlexBetween;
     width: 700px;
     margin: 0 auto;
-    @media (max-width: 700px) {
+    @media @before-w700 {
       display: inline-block;
       width: 100%;
     }
   }
 }
 .FormElementsContainerTopColumnLeft, .FormElementsContainerTopColumnRight {
-  @media (max-width: 700px) {
+  @media @before-w700 {
     width: 320px;
     margin: 0 auto;
   }
@@ -327,25 +327,26 @@ export default {
 .FormElementsColumnLeft, .FormElementsColumnCentre, .FormElementsColumnRight {
   width: 320px;
   margin-right: 126px;
-  @media (min-width: 700px) and (max-width: 1439px) {
+  @media @before-w1440 {
     width: 700px;
     margin: 0 auto;
-    @media (max-width: 699px) {
+    @media @before-w700 {
+      width: 320px;
       margin: 0 auto;
     }
   }
 }
 .FormElementsColumnLeft {
-  @media (max-width: 699px) {
+  @media @before-w700 {
     margin: 0 auto;
   }
 }
 .FormElementsColumnCentre {
   margin-right: 72px;
-  @media (min-width: 700px) and (max-width: 1439px) {
+  @media @before-w1440 {
     margin: 0 auto;
   }
-  @media (max-width: 700px) {
+  @media @before-w700 {
     margin: 0 auto;
   }
 }
@@ -354,7 +355,7 @@ export default {
   @media (min-width: 700px) and (max-width: 1439px) {
     margin: 0 auto;
   }
-  @media (max-width: 700px) {
+  @media @before-w700 {
     margin: 0 auto;
   }
 }
@@ -364,17 +365,17 @@ export default {
     width: 700px;
     .ContainerFlexBetween;
   }
-  @media (max-width: 700px) {
+  @media @before-w700 {
     margin: 0 auto;
     display: inline-block;
     width: 320px;
   }
 }
 .FormElementContainerMax1000Pt {
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     padding-top: 40px;
   }
-  @media (max-width: 700px) {
+  @media @before-w700 {
     padding-top: 40px;
   }
 }
@@ -412,7 +413,7 @@ export default {
 }
 .DropdownMt {
   margin-top: 118px;
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     margin-top: 0;
   }
 }
@@ -444,7 +445,7 @@ export default {
   .ContainerFlexBetween;
   width: 260px;
   margin-bottom: 196px;
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     margin-bottom: 40px;
   }
 }
@@ -472,7 +473,7 @@ export default {
 }
 .FormElementGuestsContainer {
   margin-top: 230px;
-  @media (max-width: 1000px) {
+  @media @before-w1000 {
     margin-top: 0;
   }
 }

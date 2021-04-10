@@ -5,25 +5,33 @@
         <div class="HeaderLogoCircle">
           <img src="../assets/logoColorLeft.png" class="HeaderLogoCircleImgLeft">
           <img src="../assets/logoColorRidth.png" class="HeaderLogoCircleImgRight">
-        <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
+          <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
         </div>
         <img src="../assets/TOXIN.png" class="HeaderLogoImgText">
       </div>
       <nav>
         <ul>
-          <li><router-link :to="{name: 'Colors'}">Colors</router-link></li>
-          <li><router-link :to="{name: 'Form'}">Form</router-link></li>
-          <li><router-link :to="{name: 'Cards'}">Cards</router-link></li>
-          <li><router-link :to="{name: 'HeaderFooter'}">HeaderFooter</router-link></li>
+          <li>
+            <router-link :to="{name: 'Colors'}">Colors</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'Form'}">Form</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'Cards'}">Cards</router-link>
+          </li>
+          <li>
+            <router-link :to="{name: 'HeaderFooter'}">HeaderFooter</router-link>
+          </li>
           <li><a href="#">Соглашения</a></li>
         </ul>
       </nav>
       <div class="HeaderEntry">
         <ButtonBackgroundNone class="headerBtnSize"
-          :text="text"
+                              :text="text"
         />
         <ButtonBig class="headerBtnBigSize"
-        :text="bigText"
+                   :text="bigText"
         />
       </div>
     </header>
@@ -95,9 +103,17 @@ header {
 }
 .HeaderLogoCircleImgLeft {
   left: 9.4px;
+   @media @before-w876 {
+     left: 4.4px;
+     top: 9px;
+   }
 }
 .HeaderLogoCircleImgRight {
   left: 21.47px;
+     @media @before-w876 {
+     left: 16.4px;
+     top: 9px;
+   }
 }
 .HeaderLogoImgImg {
   width: 40px;
