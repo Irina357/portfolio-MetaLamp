@@ -51,6 +51,16 @@
         </div>
       </div>
       <div class="FooterFooter">
+        <div class="FooterLogoContainerWidth">
+          <div class="FooterLogoImgContainerWidth768">
+            <img src="../assets/logoColorLeft.png" class="HeaderLogoCircleImgLeft">
+          <img src="../assets/logoColorRidth.png" class="HeaderLogoCircleImgRight">
+            <img src="../assets/VectorCircle.png" class="HeaderLogoImgImg">
+          </div>
+          <div class="vvv">
+            <img src="../assets/TOXIN.png" class="HeaderLogoImgText">
+          </div>
+          </div>
         <div class="FooterFooterCopy">
           <p>
             Copyright © 2018 Toxin отель. Все права защищены.
@@ -81,28 +91,41 @@ footer {
   padding-left: 9.7%;
   padding-right: 9.7%;
   background: white;
+  @media @before-w1170 {
+    padding: 3%;
+  }
+  @media @before-w768 {
+    text-align: center;
+    padding-bottom: 120px;
+  }
 }
 .FooterContainer, .FooterLogoContainer, .FooterColumnLeft, .FooterColumnRight, .FooterFooter {
   .ContainerFlexBetween
 }
 .FooterContainer {
-  border: #6fcf97 1px solid;
   box-sizing: border-box;
   width: 100%;
   padding-top: 100px;
   padding-bottom: 80px;
   @media @before-w1440 {
     flex-wrap: wrap;
-    width: 767px;
+    //width: 767px;
     margin: 0 auto;
+  }
+    @media @before-w768 {
+    display: none;
   }
 }
 .FooterLogoContainer {
   position: relative;
   align-items: center;
+   justify-content: flex-start;
+  margin-bottom: 20px;
+  @media @before-w1440 {
+    margin-bottom: 10px;
+  }
 }
 .FooterLogo {
-  border: rosybrown 1px solid;
   box-sizing: border-box;
   width: 25%;
   margin-right: 3.4%;
@@ -112,12 +135,10 @@ footer {
   }
    @media @before-w1440 {
     width: 100%;
+     padding-bottom: 50px;
   }
 }
-.FooterLogoContainer {
-  justify-content: flex-start;
-  margin-bottom: 20px;
-}
+
 .FooterColumnLeft, .FooterColumnRight {
   box-sizing: border-box;
   width: 37%;
@@ -133,18 +154,19 @@ footer {
     .fontSize14;
     opacity: 0.5;
     margin-bottom: 20px;
+    @media @before-w876 {
+      font-size: 12px;
+    }
   }
 }
 .FooterColumnLeft {
   width: 30%;
-  border: mediumvioletred 1px solid;
     @media @before-w1440 {
     width: 40%;
       margin-right: 0;
   }
 }
 .FooterColumnRight {
-  border: cornflowerblue 1px solid;
   margin-right: 0;
   width: 38%;
   display: flex;
@@ -164,6 +186,9 @@ footer {
     .fontSize14;
     width: 260px;
     margin-bottom: 20px;
+    @media @before-w876 {
+      font-size: 12px;
+    }
   }
 
   input {
@@ -179,14 +204,26 @@ footer {
 .FooterFooter {
   height: 70px;
   align-items: center;
+   @media @before-w768 {
+    display: inline-block;
+     //width: 500px;
+     padding: 0;
+     margin: 0 auto;
+  }
   p {
     .fontSize14;
     opacity: .75;
+     @media @before-w768 {
+    margin-bottom: 25px;
+  }
   }
 }
 .FooterFooterIcons {
   display: flex;
   justify-content: flex-end;
+   @media @before-w768 {
+    justify-content: center;
+  }
   img {
     margin-left: 20px;
   }
@@ -198,5 +235,26 @@ footer {
   height: 1px;
   background: @colorDark;
   opacity: .25;
+   @media @before-w1170 {
+    bottom: 120px;
+   }
+   @media @before-w768{
+   display: none;
+  }
 }
+.FooterLogoContainerWidth {
+  display: none;
+  margin-bottom: 20px;
+  @media @before-w768{
+   display: flex;
+    align-items: center;
+    width: 67px;
+    margin: 0 auto;
+    padding-top: 120px;
+  }
+}
+.FooterLogoImgContainerWidth768 {
+  position: relative;
+}
+
 </style>
