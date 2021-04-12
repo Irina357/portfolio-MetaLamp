@@ -47,6 +47,8 @@ export default {
 .Axsios {
   width: 150px;
   margin: 0 auto;
+  padding-bottom: 100px;
+  border-bottom: 1px black solid;
   ul {
     list-style-type: none;
   }
@@ -64,6 +66,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding-top: 100px;
   width: 320px;
   div {
     display: flex;

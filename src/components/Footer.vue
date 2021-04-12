@@ -1,5 +1,5 @@
 <template>
-  <div class="ContainerAll FooterBoxShadow">
+  <div class="FooterBoxShadow">
     <footer>
       <div class="FooterContainer">
         <div class="FooterLogo">
@@ -84,6 +84,7 @@
 @import '../style/variables';
 .FooterBoxShadow {
   box-shadow: 0 10px 20px rgba(31,32,65,0.05);
+  position: relative;
 }
 footer {
   box-sizing: border-box;
@@ -92,7 +93,8 @@ footer {
   padding-right: 9.7%;
   background: white;
   @media @before-w1170 {
-    padding: 3%;
+    padding-left: 3%;
+  padding-right: 3%;
   }
   @media @before-w768 {
     text-align: center;
@@ -230,14 +232,11 @@ footer {
 }
 .FooterBorder {
   position: absolute;
-  bottom: 70px;
   width: 100%;
   height: 1px;
   background: @colorDark;
+  bottom: 70px;
   opacity: .25;
-   @media @before-w1170 {
-    bottom: 120px;
-   }
    @media @before-w768{
    display: none;
   }
