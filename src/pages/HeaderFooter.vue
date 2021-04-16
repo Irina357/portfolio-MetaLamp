@@ -25,7 +25,6 @@ export default {
   .HeaderFooterContainer {
     border: #bc9cff 1px solid;
     padding-top: 140px;
-    background: #e5e5e5;
   }
 .HeaderFooterContainerFooter {
   margin-top: 40px;

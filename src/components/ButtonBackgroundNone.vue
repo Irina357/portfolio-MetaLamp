@@ -2,13 +2,13 @@
   <div class="ButtonBackgroundNoneContainer">
     <button type="button" v-bind:class="{buttonDisable: isButtonDisabled}"></button>
     <div class="buttonBackgroundWaiteContainer">
-      <button type="button" @click="addDisable">{{text}}</button>
+      <button type="button" @click="addDisable">{{text1}}</button>
     </div>
   </div>
 </template>
 <script>
 export default {
-  props: ['text'],
+  props: ['text1'],
   data () {
     return {
       isButtonDisabled: false

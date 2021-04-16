@@ -19,12 +19,14 @@
             <router-link :to="{name: 'Form'}">Form</router-link>
           </li>
           <li>
-            <router-link :to="{name: 'Cards'}">Cards</router-link>
+            <router-link :to="{name: 'Axios'}">Axios</router-link>
           </li>
           <li>
             <router-link :to="{name: 'HeaderFooter'}">HeaderFooter</router-link>
           </li>
-          <li><a href="#">Соглашения</a></li>
+          <li>
+            <router-link :to="{name: 'Cards'}">Cards</router-link>
+          </li>
         </ul>
       </nav>
       <div class="HeaderEntry">

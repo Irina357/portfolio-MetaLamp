@@ -19,14 +19,19 @@ const routes = [
     component: () => import('../pages/FormElements')
   },
   {
-    path: '/Cards',
-    name: 'Cards',
-    component: () => import('../pages/Cards')
+    path: '/Axios',
+    name: 'Axios',
+    component: () => import('../pages/Axios')
   },
   {
     path: '/HeaderFooter',
     name: 'HeaderFooter',
     component: () => import('../pages/HeaderFooter')
+  },
+  {
+    path: '/Cards',
+    name: 'Cards',
+    component: () => import('../pages/Cards')
   }
 ]
 

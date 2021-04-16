@@ -177,7 +177,7 @@
               <ButtonDisable :text="text"/>
             </div>
             <div class="ButtonContainer">
-              <ButtonBackgroundNone :text="text"/>
+              <ButtonBackgroundNone :text1="text"/>
               <ButtonBackgoundNoneDisable :text="text"/>
             </div>
             <div class="ButtonContainer ButtonTextContainer">
